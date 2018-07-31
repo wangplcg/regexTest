@@ -9,6 +9,7 @@ import sqlparse
 import re
 
 
+
 class SQLParserUtil(object):
     def __init__(self, sqlPath):
         self.operPatternDict = {
