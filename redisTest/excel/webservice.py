@@ -77,7 +77,16 @@ class SwsxFbzl(object):
             tred.start()
             time.sleep(1)
 
+    def parseResultDto(self):
+        with open(self.filePath) as file:
+            swsxDmList = file.read().splitlines()
+
+        for swsxDm in swsxDmList:
+            with open('SwsxFbzl/' + swsxDm + '.txt', 'rb+') as file:
+                d = pickle.load(file)
+                print(str(d))
+
 
 if __name__ == '__main__':
     s = SwsxFbzl()
-    s.getSwsxDm()
+    s.parseResultDto()
