@@ -5,3 +5,7 @@
 # @Site    : 
 # @File    : test.py
 # @Software: PyCharm
+
+import time
+
+print(str(time.time()* 1000))
